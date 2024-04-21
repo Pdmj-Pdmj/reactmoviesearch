@@ -29,7 +29,8 @@ export default function HomePage() {
   };
 
   useEffect(() => {
-    getMovieDetails(searchValue);
+    if (searchValue != undefined) 
+      getMovieDetails(searchValue);
     dispatch(movieDetailsAction({}));
   }, [searchValue]);
 
