@@ -15,6 +15,22 @@ const movieDetailReducer = (state = movieDetailInitiaState, action) => {
   }
 };
 
+let searchTextInitiaState = "";
+
+const searchTextReducer = (state = searchTextInitiaState, action) => {
+  switch (action.type) {
+    case "searchText": {
+      return {
+        value: action.payLoad,
+      };
+    }
+    default: {
+      return state;
+    }
+  }
+};
+
 export const masterReducer = combineReducers({
   movieDetailReducer: movieDetailReducer,
+  searchTextReducer: searchTextReducer,
 });

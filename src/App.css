@@ -1,0 +1,33 @@
+.navbarHeader {
+  justify-content: space-between;
+}
+.movieListCont {
+  justify-content: center;
+}
+body {
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+img {
+  display: block;
+  max-width: 400px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}

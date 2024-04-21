@@ -4,3 +4,9 @@ export const movieDetailsAction = (movDetail) => {
     payLoad: movDetail,
   };
 };
+export const searchTextAction = (searchText) => {
+  return {
+    type: "searchText",
+    payLoad: searchText,
+  };
+};
