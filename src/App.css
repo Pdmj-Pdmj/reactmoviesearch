@@ -21,10 +21,6 @@ body {
   width: auto;
   height: auto;
 }
-.posterImg:hover {
-  margin-top: 7%;
-  transform: scale(1.4);
-}
 
 .image-container {
   position: relative;
@@ -53,4 +49,14 @@ img {
 
 .descriptionCont {
   text-align: center;
+}
+
+.searchCont {
+  display: flex;
+  justify-content: center;
+}
+.loaderCont {
+  /* display: flex; */
+  text-align: center;
+  margin: 2em 0em;
 }

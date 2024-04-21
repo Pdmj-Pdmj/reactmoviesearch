@@ -22,7 +22,7 @@ function App() {
         <AppHeader title={headerTitle} />
       </div>
       <Routes>
-        <Route from="/?*" to="/" />
+        <Route from="/?Code*" to="/" />
         <Route exact path="/" Component={() => <HomePage />} />
         <Route exact path="/movieDetail" Component={() => <MovieDetail />} />
       </Routes>

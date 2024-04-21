@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchTextAction } from "../redux/actions";
 import { Link } from "react-router-dom";
@@ -6,9 +6,13 @@ import { Link } from "react-router-dom";
 export default function AppHeader(props) {
   const dispatch = useDispatch();
   const searchVal = useSelector((state) => state.searchTextReducer.value);
+  const [searchTxt, setSearchTxt] = useState("");
   const searchOnChange = (e) => {
-    let enteredValue = e.target.value;
-    dispatch(searchTextAction(enteredValue));
+    setSearchTxt(e.target.value);
+    // dispatch(searchTextAction(enteredValue));
+  };
+  const searchClick = (e) => {
+    dispatch(searchTextAction(searchTxt));
   };
   return (
     <nav class="navbarHeader navbar navbar-expand-lg navbar-light bg-light">
@@ -16,17 +20,22 @@ export default function AppHeader(props) {
         {props.title}
       </Link>
 
-      <div>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            value={searchVal}
-            placeholder="Enter Text"
-            aria-label="Search"
-            onChange={(e) => searchOnChange(e)}
-          ></input>
-        </form>
+      <div className="searchCont">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          value={searchTxt}
+          placeholder="Enter Text"
+          aria-label="Search"
+          onChange={(e) => searchOnChange(e)}
+        ></input>
+        <button
+          class="btn btn-outline-success my-2 my-sm-0"
+          type="submit"
+          onClick={searchClick}
+        >
+          Search
+        </button>
       </div>
     </nav>
   );
