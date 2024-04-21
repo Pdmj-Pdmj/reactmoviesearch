@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { movieDetailsAction, searchTextAction } from "../redux/actions";
+import { movieDetailsAction } from "../redux/actions";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
 
@@ -29,10 +29,10 @@ export default function HomePage() {
   };
 
   useEffect(() => {
-    if (searchValue != undefined) 
+    if (searchValue !== undefined) 
       getMovieDetails(searchValue);
-    dispatch(movieDetailsAction({}));
-  }, [searchValue]);
+      dispatch(movieDetailsAction({}));
+  }, [searchValue, dispatch]);
 
   const navigateToDetails = (movie) => {
     // storing particular movie details
