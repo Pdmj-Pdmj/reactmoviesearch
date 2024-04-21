@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { searchTextAction } from "../redux/actions";
 import { Link } from "react-router-dom";
 
 export default function AppHeader(props) {
   const dispatch = useDispatch();
-  const searchVal = useSelector((state) => state.searchTextReducer.value);
+  // const searchVal = useSelector((state) => state.searchTextReducer.value);
   const [searchTxt, setSearchTxt] = useState("");
   const searchOnChange = (e) => {
     setSearchTxt(e.target.value);
