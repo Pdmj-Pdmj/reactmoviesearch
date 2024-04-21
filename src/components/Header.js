@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchTextAction } from "../redux/actions";
+import { Link } from "react-router-dom";
 
 export default function AppHeader(props) {
   const dispatch = useDispatch();
@@ -11,7 +12,9 @@ export default function AppHeader(props) {
   };
   return (
     <nav class="navbarHeader navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand">{props.title}</a>
+      <Link to={"/"} class="navbar-brand">
+        {props.title}
+      </Link>
 
       <div>
         <form class="form-inline my-2 my-lg-0">

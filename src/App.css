@@ -5,13 +5,25 @@
   justify-content: center;
 }
 body {
-  color: #ffffff;
+  color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
 }
 
 .movie-app > .row {
   overflow-x: auto;
   flex-wrap: nowrap;
+}
+
+.image-container-detail > img {
+  display: block;
+  max-width: 600px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+}
+.posterImg:hover {
+  margin-top: 7%;
+  transform: scale(1.4);
 }
 
 .image-container {
@@ -30,4 +42,15 @@ img {
   max-height: 300px;
   width: auto;
   height: auto;
+}
+
+.errorCont {
+  color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  margin: 3em 0em;
+}
+
+.descriptionCont {
+  text-align: center;
 }
