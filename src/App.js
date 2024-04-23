@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import "./bootstrap.min.css";
 import AppHeader from "./components/Header";
 import { useDispatch } from "react-redux";
 import HomePage from "./components/Home";
