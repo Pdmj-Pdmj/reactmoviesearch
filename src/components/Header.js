@@ -5,11 +5,9 @@ import { Link } from "react-router-dom";
 
 export default function AppHeader(props) {
   const dispatch = useDispatch();
-  // const searchVal = useSelector((state) => state.searchTextReducer.value);
   const [searchTxt, setSearchTxt] = useState("");
   const searchOnChange = (e) => {
     setSearchTxt(e.target.value);
-    // dispatch(searchTextAction(enteredValue));
   };
   const searchClick = (e) => {
     dispatch(searchTextAction(searchTxt));
