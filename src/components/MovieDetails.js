@@ -18,9 +18,15 @@ export default function MovieDetail() {
             ></img>
           </div>
           <div className="descriptionCont">
-            <div>Type: {movieDetail.Type}</div>
-            <div>Title: {movieDetail.Title}</div>
-            <div>Release Year: {movieDetail.Year}</div>
+            <div>
+              <b>Type:</b> {movieDetail.Type}
+            </div>
+            <div>
+              <b>Title:</b> {movieDetail.Title}
+            </div>
+            <div>
+              <b>Release Year:</b> {movieDetail.Year}
+            </div>
           </div>
         </>
       ) : (
